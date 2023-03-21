@@ -18,6 +18,10 @@ end
 #    if fomar_pagamento = 'PIX'
 #    else
     
+
+#    if fomar_pagamento = 'PIX'
+#    else
+    
 #    end
     case  fomar_pagamento
     when "PIX"
