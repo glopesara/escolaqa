@@ -23,10 +23,13 @@ end
 #    else
     
 #    end
+find("h2", text:"Meio de pagamento")
     case  fomar_pagamento
+      
     when "PIX"
         find("h2", text: "Pix").click
         find("strong", text: "O código Pix expira em 10 minutos.")
+    when "Boleto"
     end
   end
   

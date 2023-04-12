@@ -1,12 +1,13 @@
 # language: pt
 Funcionalidade: Login
 
+@login
   Cenario: Login realizado com sucesso
     Dado que eu acesse a tela de login
     E acesse a opção email e senha
     E realize login com "gabriel.lopes@cobasi.com.br" e "Cobasi@123"
     Então devo estar logado
-
+ 
   @login_assinatura
   Cenario: Login pelo menu de assinatura
     Dado que eu acesse a tela de assinatura

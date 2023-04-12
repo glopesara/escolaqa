@@ -12,7 +12,7 @@ end
 
 Então('devo ser redirecionado para a PDP com sucesso') do
 botton1 = find("button", text: "Adicionar ao carrinho")
-botton2 = find(:xpath, '//button[text()="Assinar e economizar"]')
+botton2 = find(:xpath, '//button[text()="Comprar e programar"]')
 expect(botton1.visible?).to be true
 expect(botton2.visible?).to be true
 

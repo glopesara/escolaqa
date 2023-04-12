@@ -23,7 +23,7 @@ Então('devo ver a {string} com sucesso') do |mensagem|
 end
 
 Dado('que eu acesse a tela de assinatura') do
-    find(:xpath, '//li[contains(@class, "styles__ListLink")]//a[text()="Assinatura"]').click
+    find(:xpath, '//li[contains(@class, "styles__ListLink")]//a[text()="Compra Programada"]').click
 end
   
 Quando('eu clique no botão entrar') do

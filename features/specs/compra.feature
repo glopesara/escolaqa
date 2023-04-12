@@ -10,7 +10,7 @@ Funcionalidade: Compra de produto
     E finalizar a compra
     E realize login com "gabriel.lopes@cobasi.com.br" e "Cobasi@123"
     E clico em continuar para pagamento
-    E seleciono o 'PIX' como metódo de pagamento
+    E seleciono o 'Boleto' como metódo de pagamento
     E clico em ir para revisão
     E clico em Finalizar a compra
     Então eu visualizo o código do pix
