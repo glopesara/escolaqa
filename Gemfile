@@ -1,16 +1,18 @@
 # frozen_string_literal: true
 
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'capybara'
-gem 'cucumber'
-gem 'rspec'
-gem 'selenium-webdriver'
+gem "capybara"
+gem "cucumber"
+gem "rspec"
+gem "selenium-webdriver"
 
-gem 'allure-cucumber'
+gem "allure-cucumber"
+
+gem "report_builder"
 
 # gems para dados fakes
-gem 'cpf_cnpj', '0.5.0'
-gem 'faker', '2.17'
+gem "cpf_cnpj", "0.5.0"
+gem "faker", "2.17"
 
 # gem "rails"

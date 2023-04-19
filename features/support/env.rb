@@ -4,8 +4,9 @@ require_relative "helper"
 require "allure-cucumber"
 World(Helper)
 
+BROWSER = ENV["BROWSER"]
 #variaveis de browser
-case ENV["BROWSER"]
+case BROWSER
 when "firefox"
   @driver = :selenium
 when "fire_headless"

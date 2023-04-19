@@ -1,3 +1,6 @@
+require "report_builder"
+require "date"
+
 Before do
   visit "./"
   @homePage = HomePage.new
@@ -20,6 +23,12 @@ end
 #     tirar_foto(nome_cenario.downcase!, "passou")
 #   end
 # end
+After do |cenario|
+  foto = "log/evidencia.png"
+
+  encoded_img = page.save_screenshot(foto)
+  attach encoded_img, "image/png"
+end
 
 After do
   #save_screenshot serve para tirar um print a qualquer momento
@@ -36,4 +45,22 @@ After do
     #aonde está o aruqivo que esta na temp shot
     source: File.open(tempo_shot),
   )
+end
+
+at_exit do
+  @infos = {
+    "browser" => BROWSER.upcase,
+    "ambiente" => "Dev",
+    "Data do Teste" => Time.now.to_s,
+  }
+
+  ReportBuilder.configure do |config|
+    config.input_path = "log/report.json"
+    config.report_path = "log/report"
+    config.report_types = [:html]
+    config.report_title = "Cobasi APP"
+    config.additional_info = @infos
+    config.color = "indigo"
+  end
+  ReportBuilder.build_report
 end
